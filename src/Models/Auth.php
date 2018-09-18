@@ -1,22 +1,27 @@
-<?php 
+<?php
 
 namespace Models;
 use Models\User;
+//session_start();
 class Auth{
 	public function login($email, $password)
 	{
 //		 TODO: mintain session here
 		$query = User::where(['Email' => $email, 'password' => $password]);
 		if($query->exists()){
-			return $query->first();
-		}
 
+            $_SESSION['login_user']= $email;
+            return $query->first();
+		}
+        $this->logout();
 		return false;
 	}
 
 	public function logout()
 	{
 		/* destroy session and redirect to home page*/
+        session_destroy();
+        header("Location:login-form.php");
 	}
 
 	public function register($userArray)

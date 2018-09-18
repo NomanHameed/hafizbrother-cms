@@ -3,6 +3,11 @@ include_once "connection.php";
 use Controllers\ProductsController;
 use Intervention\Image\ImageManager;
 
+if(isset($_SESSION['login_user'])){
+
+
+    session_start();
+
 if(isset($_POST['edit'])){
     $product = \Models\Product::find($_POST['id']);
 }else{
@@ -26,8 +31,11 @@ include_once "add-new-header.php";
 	 					<a href="" class="nav-link">Feature</a>
 	 				</li>
 	 				 <li class="nav-item">
-	 					<a href="" class="nav-link">Logout</a>
+	 					<a href="logout.php" class="nav-link">Logout</a>
 	 				</li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><?php echo $_SESSION['login_user']; ?></a>
+                    </li>
  			</ul>	
  		</div>
  	</nav>
@@ -117,3 +125,8 @@ include_once "add-new-header.php";
     <script src="js/jquery-3.2.1.min.js"></script>
  </body>
  </html>
+<?php }else{
+
+    header("Location:login-form.php");
+}
+?>

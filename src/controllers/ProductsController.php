@@ -30,11 +30,11 @@ class ProductsController{
             echo "Sorry, your file was not uploaded.";
         // if everything is ok, try to upload file
         } else {
-          if (move_uploaded_file($files[$fileInputName]["tmp_name"], $target_file))
+            if (move_uploaded_file($files[$fileInputName]["tmp_name"], $target_file))
                 {
 //        image intervention
-              $manager = new ImageManager();
-              $image = $manager->make($target_file)->resize(300, 200);
+                $manager = new ImageManager();
+                $image = $manager->make($target_file)->resize(300, 200);
               $image->save($target_dir . '/thumb/'. $fileName);
 //              echo "The file has been uploaded.";
             } else {

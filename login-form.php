@@ -1,4 +1,5 @@
 <?php 
+
     include_once('connection.php');
     include_once("functions.php");
 
@@ -56,7 +57,12 @@
                     <label>Error</label>
            <?php
             }else{
+
+//                if(isset($_SESSION['login_user'])){
                 header("Location:add-product.php");
+//            }else{
+//                    header("Location:login.php");
+//                }
             }
 //            dd($user);
 //
@@ -89,4 +95,7 @@
 </div> 
 <!--container end.//-->
 
-<?php include_once("footer.php") ?>
+<?php include_once("footer.php")
+
+?>
+
