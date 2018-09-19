@@ -1,12 +1,13 @@
 <?php
-include_once "connection.php";
+
 use Controllers\ProductsController;
 use Intervention\Image\ImageManager;
+session_start();
+        if(!isset($_SESSION['login_user'])){
+            header("Location:login-form.php");
+    } else{
+    include_once "connection.php";
 
-if(isset($_SESSION['login_user'])){
-
-
-    session_start();
 
 if(isset($_POST['edit'])){
     $product = \Models\Product::find($_POST['id']);
@@ -125,8 +126,5 @@ include_once "add-new-header.php";
     <script src="js/jquery-3.2.1.min.js"></script>
  </body>
  </html>
-<?php }else{
-
-    header("Location:login-form.php");
-}
+<?php }
 ?>
