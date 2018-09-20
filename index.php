@@ -118,8 +118,8 @@
     <div class="section light-bg" id="gallery">
         <div class="container">
             <div class="section-title">
-                <small>GALLERY</small>
-                <h3>App Screenshots</h3>
+                <small>GARMENTS</small>
+                <h3>ALL FIELDS</h3>
             </div>
 
             <div class="img-gallery owl-carousel owl-theme">
@@ -132,6 +132,19 @@
         </div>
 
     </div>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+
+</div>
+
     <!-- // end .section -->
 
     <!-- // end .section -->
@@ -146,16 +159,16 @@
 
             <div class="row pt-4">
                 <div class="col-md-6">
-                    <h4 class="mb-3" style="color: black">Can I try before I buy?</h4>
-                    <p class="light-font mb-5" style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-                    <h4 class="mb-3" style="color: black">What payment methods do you accept?</h4>
+                    <h4 class="mb-3" style=" color: whitesmoke">Can I try before I buy?</h4>
+                    <p class="light-font mb-5" style=" color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
+                    <h4 class="mb-3" style=" color: whitesmoke">What payment methods do you accept?</h4>
                     <p class="light-font mb-5" style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
 
                 </div>
                 <div class="col-md-6">
-                    <h4 class="mb-3" style="color: black">Can I change my plan later?</h4>
+                    <h4 class="mb-3" style=" color: whitesmoke">Can I change my plan later?</h4>
                     <p class="light-font mb-5" style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
-                    <h4 class="mb-3" style="color: black">Do you have a contract?</h4>
+                    <h4 class="mb-3" style=" color: whitesmoke">Do you have a contract?</h4>
                     <p class="light-font mb-5" style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. </p>
 
                 </div>
@@ -206,7 +219,11 @@
 
     </div>
     <!-- // end .section -->
+<footer class="my-5 text-center">
+    <!-- Copyright removal is not prohibited! -->
+    <p class="mb-2" style="color: white"><small>COPYRIGHT © 2018. ALL RIGHTS RESERVED. <a href="https://www.Websoul.net" style="color: black">Websoul.net</a></small></p>
 
+</footer>
 
 <?php
     include_once("footer.php");
