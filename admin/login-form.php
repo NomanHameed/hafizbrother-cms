@@ -1,27 +1,14 @@
-<?php 
+<?php
+define('IS_IN_SCRIPT',1);// define a flag
+
 session_start();
-    include_once('connection.php');
-    include_once("functions.php");
+    include_once('../connection.php');
 
  ?>
 
-<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-<!------ Include the above in your HEAD tag ---------->
+<?php  include_once("incl/add-new-header.php"); ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-</head>
 <body>
- <?php // include_once("header.php"); ?>
 
 <div class="container">
 <br>  <p class="text-center">Welcome To Hafiz Brothers Admin Panel <a href=""></a></p>
@@ -32,7 +19,7 @@ session_start();
 <div class="col-md-6">
 <div class="card">
 <header class="card-header">
-    <a href="http://localhost/hafiz/registration-form.php" class="float-right btn btn-outline-primary mt-1">Sign Up</a>
+<!--    <a href="http://localhost/hafiz/registration-form.php" class="float-right btn btn-outline-primary mt-1">Sign Up</a>-->
     <h4 class="card-title mt-2">Sign In</h4>
 </header>
 <article class="card-body">
@@ -56,16 +43,12 @@ session_start();
            <?php
             }else{
 
-//                if(isset($_SESSION['login_user'])){
+                if(isset($_SESSION['login_user'])){
                 header("Location:add-product.php");
-//            }else{
-//                    header("Location:login.php");
-//                }
+            }else{
+                    header("Location:login.php");
+                }
             }
-//            dd($user);
-//
-//            $main= new Main();
-//            $main->Login($email,$password);
         }
 
         ?>
@@ -83,7 +66,7 @@ session_start();
     </div> <!-- form-group// -->                                                
 </form>
 </article> <!-- card-body end .// -->
-<div class="border-top card-body text-center">Create an account? <a href="http://localhost/hafiz/registration-form.php">SIGN UP</a></div>
+<!--<div class="border-top card-body text-center">Create an account? <a href="http://localhost/hafiz/registration-form.php">SIGN UP</a></div>-->
 </div> <!-- card.// -->
 </div> <!-- col.//-->
 
@@ -92,32 +75,8 @@ session_start();
 
 </div> 
 <!--container end.//-->
-
-    <footer class="my-5 text-center">
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2018. ALL RIGHTS RESERVED.
-                <a href="https://www.Websoul.net" style="color: black">Websoul.net</a></small></p>
-
-    </footer>
-
-    <!-- jQuery and Bootstrap -->
-
-    <script src="js/lightbox-plus-jquery.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins JS -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-
-
-
-
-
-
-
-    </body>
-
-</html>
-
+<?php
+include_once "incl/footer-right.php";
+include_once "incl/footer.php";
+?>
 

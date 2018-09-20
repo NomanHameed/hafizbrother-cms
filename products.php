@@ -42,7 +42,7 @@
              <div class="row">
             <?php foreach ($products as $product){
                 ?>
-                <div class="col-md-3">
+                <div class="col-md-3" style="margin-top: 15px">
              <a href="product-images/<?php echo $product->source; ?>"
                        data-lightbox="roadtrip" data-title="<?php echo "<b>".$product->product_name . "<b>" ; ?>" >
                         <img src="product-images/thumb/<?php echo $product->source; ?>" class="img-thumbnail">

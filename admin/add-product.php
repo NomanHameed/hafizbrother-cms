@@ -1,12 +1,12 @@
 <?php
-
+define('IS_IN_SCRIPT',1);// define a flag
 use Controllers\ProductsController;
 use Intervention\Image\ImageManager;
 session_start();
         if(!isset($_SESSION['login_user'])){
             header("Location:login-form.php");
     } else{
-    include_once "connection.php";
+    include_once "../connection.php";
 
 
 if(isset($_POST['edit'])){
@@ -15,32 +15,11 @@ if(isset($_POST['edit'])){
     $product = new  \Models\Product(['product_name' => '', 'product_code' => '']);
 }
 
-include_once "add-new-header.php";
+include_once "incl/add-new-header.php";
+include_once "incl/navbar.php";
  ?>
 
- <body>
- 	<nav class="navbar navbar-expand-lg navbar-light">
- 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"> 
- 			<span class="navbar-toggler-icon"></span>
- 		</button>
- 		<div class="collapse navbar-collapse" id="navbarNav">
- 			<ul class="navbar-nav">
-	 				<li class="nav-item">
-	 					<a href="" class="nav-link">Home</a>
-	 				</li>
-	 				<li class="nav-item">
-	 					<a href="" class="nav-link">Feature</a>
-	 				</li>
-	 				 <li class="nav-item">
-	 					<a href="logout.php" class="nav-link">Logout</a>
-	 				</li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><?php echo $_SESSION['login_user']; ?></a>
-                    </li>
- 			</ul>	
- 		</div>
- 	</nav>
-<br>
+
 
 
 <div class="container">
@@ -121,10 +100,9 @@ include_once "add-new-header.php";
 <br>
 
 	<?php
-    include_once('products-table.php'); ?>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
- </body>
- </html>
+    include_once('products-table.php');
+    include_once("incl/footer.php");
+    ?>
+
 <?php }
 ?>

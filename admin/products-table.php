@@ -18,7 +18,7 @@ $products = \Models\Product::all();
         <td><?php echo $product->id; ?></td>
         <td><?php echo $product->product_name; ?></td>
         <td><?php echo $product->product_code; ?></td>
-        <td> <img class="img-thumbnail" style="width: 100px; height: 50px" src="product-images/<?php echo $product->source; ?>" /></td>
+        <td> <img class="img-thumbnail" style="width: 100px; height: 50px" src="../product-images/<?php echo $product->source; ?>" /></td>
         <form action="add-product.php" method="post">
             <td>
                 <input name="product_image" type="hidden" value="<?php echo $product->source; ?>" >

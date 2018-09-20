@@ -2,19 +2,20 @@
 <?php
 
     include_once("header.php");
-    include_once("navbar.php");
-    include_once("headsection.php");
+    include_once("include/navbar.php");
+    include_once("include/headsection.php");
 
-?>
+     // end .section headsection
 
-    <!-- // end .section headsection-->
-<?php include_once("features.php"); ?>
+     include_once("include/features.php"); ?>
 
     <br>
+
     <!-- // end .section -->
-<?php include_once("productsection.php"); ?>
-  
-             <br>
+
+    <?php include_once("include/productsection.php"); ?>
+
+    <br>
 
     <div class="section light-bg">
         <div class="container">
@@ -107,37 +108,10 @@
 
     <!-- // end .section -->
 
+<!--        our customer section-->
 
-    <div class="section" id="customersection">
-        <div class="container">
-            <div class="section-title">
-                <h3 style="color: White">What our Customers Says</h3>
-            </div>
-
-            <div class="testimonials owl-carousel">
-                <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
-                    <blockquote class="blockquote" style="color: white">Data Requre to show</blockquote>
-                    <h5 class="mt-4 mb-2" style="color: white">Crystal Gordon</h5>
-                    <!-- <p class="text-primary">United States</p> -->
-                </div>
-                <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
-                    <blockquote class="blockquote" style="color: white">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2" style="color: white">Crystal Gordon</h5>
-                    <!-- <p class="text-primary">United States</p> -->
-                </div>
-                <div class="testimonials-single">
-                    <img src="images/client.png" alt="client" class="client-img">
-                    <blockquote class="blockquote" style="color: white">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2" style="color: white">Crystal Gordon</h5>
-                    <!-- <p class="text-primary">United States</p> -->
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+<?php include_once "include/our-customer.php";
+?>
     <!-- // end .section -->
 
 
@@ -235,5 +209,5 @@
 
 
 <?php
-include_once("footer.php");
+    include_once("footer.php");
 ?>

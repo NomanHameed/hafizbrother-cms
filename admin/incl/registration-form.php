@@ -7,11 +7,8 @@ use Models\Auth;
 <!------ Include the above in your HEAD tag ---------->
 
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
-<?php 
-	include_once("functions.php");
-	// include_once("database.php");
-
-	 include_once('connection.php');
+<?php
+	 include_once('../../Connection.php');
 	
 //	 $product = new Models\Auth();
 //echo "<pre>";

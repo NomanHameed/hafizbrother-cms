@@ -8,7 +8,7 @@ class ProductsController{
 
     private function uploadFile($files, $productId){
         $fileInputName = 'product_image';
-        $target_dir = "product-images/";
+        $target_dir = "../product-images/";
         $fileName = $productId . '-' . basename($files[$fileInputName]["name"]);
         $target_file  =$target_dir . $fileName;
         $uploadOk = 1;
@@ -114,9 +114,9 @@ class ProductsController{
         $product->product_name = $data['product_name'];
         $product->product_code = $data['product_code'];
 
-
         if(isset($files['product_image'])){
-
+            unlink("../product-images/".$product->source);
+            unlink("../product-images/thumb/".$product->source);
             $product->source = $this->uploadFile($files, $id);
         }
         $product->save();
@@ -130,8 +130,8 @@ class ProductsController{
 
         $product = Product::where('id' , $id)->delete();
         if ($product){
-                unlink("product-images/".$file);
-                unlink("product-images/thumb/".$file);
+                unlink("../product-images/".$file);
+                unlink("../product-images/thumb/".$file);
                 $msg="Item Delete Successfully";
                 return $msg;
         }

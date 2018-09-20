@@ -6,7 +6,7 @@
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
                         <!-- <img src="" class="img-fluid" alt="Hafiz Brothers"> -->
-                        <a class="navbar-brand" href="index.php"><b>Hafiz Brothers</b> </a> 
+                        <a class="navbar-brand" href="../index.php"><b>Hafiz Brothers</b> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
