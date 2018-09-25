@@ -1,9 +1,23 @@
 <?php
 define('IS_IN_SCRIPT',1);// define a flag
-
 session_start();
-    include_once('../connection.php');
+include_once('../connection.php');
 
+if(\Models\Auth::isLoggedIn()){
+    \Models\Auth::redirectToProductPage();
+}
+$message = isset($_GET['message']) ? $_GET['message'] : '';
+
+        if(isset($_POST['loginButton'])){
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            if(empty($email) || empty($password)){
+               $message = 'Email or password is empty';
+            }else{
+                $auth = new Models\Auth();
+                $auth->login($email, $password);
+            }
+        }
  ?>
 
 <?php  include_once("incl/add-new-header.php"); ?>
@@ -23,35 +37,14 @@ session_start();
     <h4 class="card-title mt-2">Sign In</h4>
 </header>
 <article class="card-body">
+    <?php if(!empty($message)) {
+        ?>
+        <div class="alert alert-danger"><?php echo $message; ?></div>
+    <?php
+    } ?>
 <form method="post" action="login-form.php">
     <div class="form-row">
-        <?php
-        if(isset($_POST['loginButton'])){
 
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            if(empty($email)){
-                ?>
-                <div class="alert">Email is empty</div>
-                <?php
-                exit;
-            }
-            $auth = new Models\Auth();
-            $user = $auth->login($email, $password);
-            if($user==false){ ?>
-                    <label>Error</label>
-           <?php
-            }else{
-
-                if(isset($_SESSION['login_user'])){
-                header("Location:add-product.php");
-            }else{
-                    header("Location:login.php");
-                }
-            }
-        }
-
-        ?>
     </div> <!-- form-row end.// -->
     <div class="form-group">
         <label>Email address</label>
