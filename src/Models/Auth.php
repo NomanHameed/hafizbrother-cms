@@ -1,20 +1,17 @@
 <?php
 
 namespace Models;
-use Models\User;
-//session_start();
 class Auth{
 	public function login($email, $password)
 	{
 //		 TODO: mintain session here
-		$query = User::where(['Email' => $email, 'password' => $password]);
-		if($query->exists()){
-
+      	$query = User::where(['email' => $email, 'password' => $password]);
+      	if($query->exists()){
             $_SESSION['login_user']= $email;
-            return $query->first();
-		}
-        $this->logout();
-		return false;
+            header("Location: add-product.php");
+            exit;
+        }
+        header("Location:login-form.php?message=invalid credentials");
 	}
 
 	public function logout()
@@ -40,6 +37,16 @@ class Auth{
 		$user->save();
 		return ['status' => 'warning', 'message' => "New User Created"];
 	}
+
+	public static function isLoggedIn()
+    {
+        return isset($_SESSION['login_user']);
+    }
+
+    public static function redirectToProductPage()
+    {
+        header("Location: add-product.php");
+    }
 
 }
 
