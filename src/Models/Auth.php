@@ -2,7 +2,11 @@
 
 namespace Models;
 class Auth{
-	public function login($email, $password)
+    public static function isLoggedIn()
+    {
+        return isset($_SESSION['login_user']);
+    }
+    public function login($email, $password)
 	{
 //		 TODO: mintain session here
       	$query = User::where(['email' => $email, 'password' => $password]);
@@ -38,10 +42,7 @@ class Auth{
 		return ['status' => 'warning', 'message' => "New User Created"];
 	}
 
-	public static function isLoggedIn()
-    {
-        return isset($_SESSION['login_user']);
-    }
+
 
     public static function redirectToProductPage()
     {

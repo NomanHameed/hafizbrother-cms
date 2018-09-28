@@ -2,9 +2,9 @@
 define('IS_IN_SCRIPT',1);// define a flag
 session_start();
 include_once('../connection.php');
-
-if(\Models\Auth::isLoggedIn()){
-    \Models\Auth::redirectToProductPage();
+$aut=new \Models\Auth;
+if($aut->isLoggedIn()){
+    $aut->redirectToProductPage();
 }
 $message = isset($_GET['message']) ? $_GET['message'] : '';
 
