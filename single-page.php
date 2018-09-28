@@ -34,12 +34,12 @@ $products = \Models\Product::all();
     </header>
     <br><br>
     <div class="container">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="product-images/27-2.png" alt="Sorry">
+                    <div class="col-md-6 col-sm-4">
+                        <img src="product-images/28-3.jpg" width="300px" height="200px" alt="Sorry">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-4">
                             <div class="col-md-12">
                                 <p>Details</p>
                             </div>
