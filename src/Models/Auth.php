@@ -42,7 +42,10 @@ class Auth{
 		return ['status' => 'warning', 'message' => "New User Created"];
 	}
 
-
+    public static function redirectToChangePasswordPage()
+    {
+        header("Location: change-password.php");
+    }
 
     public static function redirectToProductPage()
     {
@@ -65,8 +68,8 @@ class Message {
 	{
 		?>
 		 <div class="alert alert-<?php echo $status; ?>"><?php echo $message; ?></div>
-     
-		<?php 
+
+		<?php
 	}
 
 	public function showErrorMessage($message)

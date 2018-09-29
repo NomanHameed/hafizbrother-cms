@@ -19,9 +19,6 @@ include_once "incl/add-new-header.php";
 include_once "incl/navbar.php";
  ?>
 
-
-
-
 <div class="container">
 	<div class="col-md-12">
 
@@ -99,7 +96,7 @@ include_once "incl/navbar.php";
 		<div class="col-md-2">
 		<button type="submit" name="<?php echo (isset($_POST['edit']))? 'update' : 'save'; ?>" class="btn btn-primary"> SAVE  </button>
 		</div>
-</div>	
+</div>
 <br>
 </form>
 

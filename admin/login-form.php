@@ -11,6 +11,7 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
         if(isset($_POST['loginButton'])){
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $password=md5($password);
             if(empty($email) || empty($password)){
                $message = 'Email or password is empty';
             }else{
@@ -53,10 +54,10 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
     <div class="form-group">
         <label>Password</label>
         <input class="form-control" type="password" name="password">
-    </div> <!-- form-group end.// -->  
+    </div> <!-- form-group end.// -->
     <div class="form-group">
         <button type="submit" name="loginButton" class="btn btn-primary btn-block"> LOG IN  </button>
-    </div> <!-- form-group// -->                                                
+    </div> <!-- form-group// -->
 </form>
 </article> <!-- card-body end .// -->
 <!--<div class="border-top card-body text-center">Create an account? <a href="http://localhost/hafiz/registration-form.php">SIGN UP</a></div>-->
@@ -66,7 +67,7 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
 </div> <!-- row.//-->
 
 
-</div> 
+</div>
 <!--container end.//-->
 <?php
 include_once "incl/footer-right.php";
