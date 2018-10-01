@@ -30,7 +30,6 @@ include_once "incl/navbar.php";
             $response = $productsController->add($_POST, $_FILES);
             else if(isset($_POST['update']))
                 $response = $productsController->update($_POST, $_FILES, $_POST['id']);
-
             if(isset($response['messages']['status'])
                 &&
                 count($response['messages']['messages']) > 0

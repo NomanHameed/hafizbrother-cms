@@ -49,14 +49,13 @@ class Auth{
         header("Location: add-product.php");
     }
     public function ChangePassword($password,$email){
-        $error="danger";
-        $messages=['status'=>'success'];
+
 
                 $user = User::find(1);
         $user->password= $password;
         $user->save();
-    echo $user->email;
-    echo $user->password;
+//    echo $user->email;
+//    echo $user->password;
     }
 }
 

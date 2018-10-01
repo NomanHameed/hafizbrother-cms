@@ -7,14 +7,20 @@ if(!isset($_SESSION['login_user'])){
 } else {
     include_once "../connection.php";
 
-    $message = isset($_GET['message']) ? $_GET['message'] : '';
+//    $message = isset($_GET['message']) ? $_GET['message'] : '';
 
     if (isset($_POST['change'])) {
+        $error="danger";
+        $messages=['status'=>'success'];
         $n_password = $_POST['new_password'];
         $c_password = $_POST['confirm_password'];
         $email=$_POST['email'];
         if (empty($n_password) || empty($c_password)) {
-            $message = "Please Fill all Fields";
+            $messages['status']=$error;
+            $messages['messages']['empty']="Please Fill All Fields";
+            if($messages['messages']['status']){
+            echo $messages['messages']['empty'];
+            }
         } else {
             if ($n_password == $c_password) {
                 $newpass=md5($n_password);
@@ -48,9 +54,10 @@ if(!isset($_SESSION['login_user'])){
                         <h4 class="card-title mt-2">Change Password</h4>
                     </header>
                     <article class="card-body">
-                        <?php if (!empty($message)) {
+                        <?php if (!empty($messages['message']['status'])) {
                             ?>
-                            <div class="alert alert-danger"><?php echo $message; ?></div>
+                           <h1>hi</h1>
+                            <div class="alert alert-danger"><?php echo $messages['messages']['status']; ?></div>
                             <?php
                         } ?>
                         <form method="post" action="change-password.php">
