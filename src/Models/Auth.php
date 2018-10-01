@@ -1,6 +1,7 @@
 <?php
 
 namespace Models;
+
 class Auth{
     public static function isLoggedIn()
     {
@@ -42,16 +43,21 @@ class Auth{
 		return ['status' => 'warning', 'message' => "New User Created"];
 	}
 
-    public static function redirectToChangePasswordPage()
-    {
-        header("Location: change-password.php");
-    }
 
     public static function redirectToProductPage()
     {
         header("Location: add-product.php");
     }
+    public function ChangePassword($password,$email){
+        $error="danger";
+        $messages=['status'=>'success'];
 
+                $user = User::find(1);
+        $user->password= $password;
+        $user->save();
+    echo $user->email;
+    echo $user->password;
+    }
 }
 
 
