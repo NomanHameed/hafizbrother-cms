@@ -17,7 +17,8 @@ if(isset($_POST['edit'])){
 
 include_once "incl/add-new-header.php";
 include_once "incl/navbar.php";
- ?>
+
+?>
 
 <div class="container">
 	<div class="col-md-12">

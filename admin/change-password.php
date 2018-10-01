@@ -6,39 +6,6 @@ if(!isset($_SESSION['login_user'])){
     header("Location:login-form.php");
 } else {
     include_once "../connection.php";
-
-//    $message = isset($_GET['message']) ? $_GET['message'] : '';
-
-    if (isset($_POST['change'])) {
-        $error="danger";
-        $messages=['status'=>'success'];
-        $n_password = $_POST['new_password'];
-        $c_password = $_POST['confirm_password'];
-        $email=$_POST['email'];
-        if (empty($n_password) || empty($c_password)) {
-            $messages['status']=$error;
-            $messages['messages']['empty']="Please Fill All Fields";
-            if($messages['messages']['status']){
-            echo $messages['messages']['empty'];
-            }
-        } else {
-            if ($n_password == $c_password) {
-                $newpass=md5($n_password);
-                $old= \Models\User::find("1");
-                if ($newpass == $old->password){
-                    $message="Please Use a Password not used in Past";
-                }else{
-                    $user=new \Models\Auth();
-                    $user->ChangePassword($newpass,$email);
-                    $message = "Password Change Successfully";
-                }
-            } else {
-                $message = "Passwords Not Match";
-            }
-        }
-
-    }
-
     include_once "incl/add-new-header.php";
     include_once "incl/navbar.php";
     ?>
@@ -54,12 +21,26 @@ if(!isset($_SESSION['login_user'])){
                         <h4 class="card-title mt-2">Change Password</h4>
                     </header>
                     <article class="card-body">
-                        <?php if (!empty($messages['message']['status'])) {
-                            ?>
-                           <h1>hi</h1>
-                            <div class="alert alert-danger"><?php echo $messages['messages']['status']; ?></div>
-                            <?php
-                        } ?>
+                        <?php
+                        if (isset($_POST['change'])) {
+                            $user = new \Models\Auth();
+                            $response = $user->ChangePassword($_POST);
+                            if (isset($response['messages']['status'])
+                                &&
+                                count($response['messages']['messages']) > 0
+                            ) { ?>
+                            <div class="alert alert-<?php echo $response['messages']['status']; ?>">
+                                <?php
+                                foreach ($response['messages']['messages'] as $message) {
+                                    ?>
+                                    <div> <?php echo $message; ?></div>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                        }
+
+                        ?>
                         <form method="post" action="change-password.php">
                             <div class="form-row">
                                 <input type="hidden" name="email" value="<?php echo

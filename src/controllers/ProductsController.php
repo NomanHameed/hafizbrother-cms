@@ -99,7 +99,6 @@ class ProductsController{
             $messages['messages']['product_code'] = 'Product Code cannot be empty';
 
         }
-
         if($messages['status'] == $error){
             return compact(  'messages');
         }
@@ -110,6 +109,7 @@ class ProductsController{
             $messages['messages']['already_exits'] = "Product Already Exists";
             return compact('messages');
         }
+
         $product = Product::find($id);
         $product->product_name = $data['product_name'];
         $product->product_code = $data['product_code'];
