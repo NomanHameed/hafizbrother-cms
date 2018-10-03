@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<?php include_once 'Connection.php';
+<?php include_once 'connection.php';
 ?>
 <!--
 

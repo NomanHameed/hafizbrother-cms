@@ -17,34 +17,34 @@
 
     <br>
 
-    <div class="section light-bg">
+    <div class="section light-bg" id="garments">
         <div class="container">
             <div class="section-title">
-                <small>FEATURES</small>
-                <h3>Do more with our Services</h3>
+                <small>We Are Also Deal In</small>
+                <h3>GARMETNS</h3>
             </div>
 
             <ul class="nav nav-tabs nav-justified" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#communication">Communication</a>
+                    <a class="nav-link active" data-toggle="tab" href="#communication">Man</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#schedule">Scheduling</a>
+                    <a class="nav-link" data-toggle="tab" href="#schedule">Women</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#messages">Messages</a>
+                    <a class="nav-link" data-toggle="tab" href="#messages">Baby</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#livechat">Live Chat</a>
+                    <a class="nav-link" data-toggle="tab" href="#livechat">Home Collection</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="communication">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="images/man.jpg" width="300px" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
 
-                            <h2>Communicate with ease</h2>
+                            <h2>Man Garments Collection</h2>
                             <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
                                 congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
@@ -58,7 +58,7 @@
                 <div class="tab-pane fade" id="schedule">
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
-                            <h2>Scheduling when you want</h2>
+                            <h2>Women Garments Collection</h2>
                             <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
                                 congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
@@ -67,14 +67,14 @@
                                 sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
                             </p>
                         </div>
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="images/Women.jpg" width="300px" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="messages">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="images/kids.jpg" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
-                            <h2>Realtime Messaging service</h2>
+                            <h2>Baby Garments Collection</h2>
                             <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
                                 congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
@@ -88,7 +88,7 @@
                 <div class="tab-pane fade" id="livechat">
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
-                            <h2>Live chat when you needed</h2>
+                            <h2>Home Collection</h2>
                             <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
                                 congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
@@ -97,7 +97,7 @@
                                 sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
                             </p>
                         </div>
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="images/home-collection.jpg" width="300px" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@
 
 
 
-  
+
 
              <!-- end gallery -->
 
@@ -227,4 +227,4 @@
 
 <?php
     include_once("footer.php");
-?>
+    ?>

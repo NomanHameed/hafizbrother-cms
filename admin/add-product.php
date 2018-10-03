@@ -17,10 +17,8 @@ if(isset($_POST['edit'])){
 
 include_once "incl/add-new-header.php";
 include_once "incl/navbar.php";
- ?>
 
-
-
+?>
 
 <div class="container">
 	<div class="col-md-12">
@@ -33,7 +31,6 @@ include_once "incl/navbar.php";
             $response = $productsController->add($_POST, $_FILES);
             else if(isset($_POST['update']))
                 $response = $productsController->update($_POST, $_FILES, $_POST['id']);
-
             if(isset($response['messages']['status'])
                 &&
                 count($response['messages']['messages']) > 0
@@ -68,6 +65,12 @@ include_once "incl/navbar.php";
 
 <form method="post" action="add-product.php" class="" enctype="multipart/form-data">
 <div class="row">
+    <div class="col-md-3 text-center">Name</div>
+    <div class="col-md-3 text-center">Details</div>
+    <div class="col-md-3 text-center">Image</div>
+</div>
+    <hr>
+    <div class="row">
 		<div class="col-md-3">
             <input type="hidden" name="id" value="<?php echo $product->id ?>" />
         	<input
@@ -78,21 +81,22 @@ include_once "incl/navbar.php";
             />
         </div>
 		<div class="col-md-3">
-        	<input
+<!--        	<input-->
+       <textarea
                     class="form-control"
                     type="text"
-                    placeholder="Product Code"
+                    placeholder="Details"
                     name="product_code"
-                    value="<?php echo $product->product_code; ?>"
-            />
+       ><?php echo trim($product->product_code); ?>
+       </textarea>
 		</div>
 		<div class="col-md-4">
-		        <input class="form-control" type="file" name="product_image">  
+		        <input class="form-control" value="<?php echo $product->source ?>" type="file" name="product_image">
 		</div>
 		<div class="col-md-2">
 		<button type="submit" name="<?php echo (isset($_POST['edit']))? 'update' : 'save'; ?>" class="btn btn-primary"> SAVE  </button>
 		</div>
-</div>	
+</div>
 <br>
 </form>
 

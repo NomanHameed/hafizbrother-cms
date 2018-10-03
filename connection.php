@@ -1,16 +1,22 @@
-<?php 
-include('vendor/autoload.php');
+<?php
 
+include('vendor/autoload.php');
+include 'constants.php';
+if(DEBUG){
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
 
 $capsule->addConnection([
     'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'hafiz',
-    'username'  => 'root',
-    'password'  => '',
+    'host'      => HOST,
+    'database'  => DATABASE_NAME,
+    'username'  => USER,
+    'password'  => PASSWORD,
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',

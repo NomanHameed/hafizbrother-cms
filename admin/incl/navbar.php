@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="" class="nav-link">Home</a>
+                <a href="add-product.php" class="nav-link">Add Products</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link">Feature</a>
+                <a href="change-password.php" class="nav-link">Change Password</a>
             </li>
             <li class="nav-item">
                 <a href="logout.php" class="nav-link">Logout</a>

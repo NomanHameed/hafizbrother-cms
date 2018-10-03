@@ -1,9 +1,24 @@
 <?php
 define('IS_IN_SCRIPT',1);// define a flag
-
 session_start();
-    include_once('../connection.php');
+include_once('../connection.php');
+$aut=new \Models\Auth;
+if($aut->isLoggedIn()){
+    $aut->redirectToProductPage();
+}
+$message = isset($_GET['message']) ? $_GET['message'] : '';
 
+        if(isset($_POST['loginButton'])){
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $password=md5($password);
+            if(empty($email) || empty($password)){
+               $message = 'Email or password is empty';
+            }else{
+                $auth = new Models\Auth();
+                $auth->login($email, $password);
+            }
+        }
  ?>
 
 <?php  include_once("incl/add-new-header.php"); ?>
@@ -23,35 +38,14 @@ session_start();
     <h4 class="card-title mt-2">Sign In</h4>
 </header>
 <article class="card-body">
+    <?php if(!empty($message)) {
+        ?>
+        <div class="alert alert-danger"><?php echo $message; ?></div>
+    <?php
+    } ?>
 <form method="post" action="login-form.php">
     <div class="form-row">
-        <?php
-        if(isset($_POST['loginButton'])){
 
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            if(empty($email)){
-                ?>
-                <div class="alert">Email is empty</div>
-                <?php
-                exit;
-            }
-            $auth = new Models\Auth();
-            $user = $auth->login($email, $password);
-            if($user==false){ ?>
-                    <label>Error</label>
-           <?php
-            }else{
-
-                if(isset($_SESSION['login_user'])){
-                header("Location:add-product.php");
-            }else{
-                    header("Location:login.php");
-                }
-            }
-        }
-
-        ?>
     </div> <!-- form-row end.// -->
     <div class="form-group">
         <label>Email address</label>
@@ -60,10 +54,10 @@ session_start();
     <div class="form-group">
         <label>Password</label>
         <input class="form-control" type="password" name="password">
-    </div> <!-- form-group end.// -->  
+    </div> <!-- form-group end.// -->
     <div class="form-group">
         <button type="submit" name="loginButton" class="btn btn-primary btn-block"> LOG IN  </button>
-    </div> <!-- form-group// -->                                                
+    </div> <!-- form-group// -->
 </form>
 </article> <!-- card-body end .// -->
 <!--<div class="border-top card-body text-center">Create an account? <a href="http://localhost/hafiz/registration-form.php">SIGN UP</a></div>-->
@@ -73,7 +67,7 @@ session_start();
 </div> <!-- row.//-->
 
 
-</div> 
+</div>
 <!--container end.//-->
 <?php
 include_once "incl/footer-right.php";
