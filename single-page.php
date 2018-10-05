@@ -28,21 +28,28 @@ $products = \Models\Product::all();
     </div>
 
      <header class="bg-gradient" id="home">
-         <div class="col-lg-12 text-center call-to-action">
-             <h3 style="color: white;">  Our Products</h3>
-         </div>
+<!--         <div class="col-lg-12 text-center call-to-action">-->
+<!--             <h3 style="color: white;">  Our Products</h3>-->
+<!--         </div>-->
+<!--         <br>-->
     </header>
     <br><br>
     <div class="container">
+<div class="col-md-12">
+    <a href="#" class="previous btn btn-primary">&laquo; Previous</a>
+    <a href="#" class="next btn btn-primary" >Next &raquo;</a>
+</div>
+        <br>
             <div class="col-md-12 col-sm-12">
                 <div class="row">
-                    <div class="col-md-6 col-sm-4">
-                        <img src="product-images/28-3.jpg" width="300px" height="200px" alt="Sorry">
+                    <div class="col-md-7 col-sm-8 align-content-center">
+                        <img width="500" height="450" src="images/man.jpg" alt="Sorry">
                     </div>
-                    <div class="col-md-6 col-sm-4">
-                            <div class="col-md-12">
-                                <p>Details</p>
-                            </div>
+                    <div class="col-md-5 col-sm-4 align-content-center">
+                <h2>Heading</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
+                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
+                        </p>
                     </div>
                 </div>
             </div>
