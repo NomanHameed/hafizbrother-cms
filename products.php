@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
                         <!-- <img src="" class="img-fluid" alt="Hafiz Brothers"> -->
-                        <a class="navbar-brand" href="index.php"><b>Hafiz Brothers</b> </a> 
+                        <a class="navbar-brand" href="index.php"><b>Hafiz Brothers</b> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
@@ -79,10 +79,10 @@
             <div class="row">
                 <?php foreach ($products as $product){
                     ?>
-                    <div class="col-md-3" style="margin-top: 15px">
+                    <div class="col-md-3" style="margin-top: 15px" id="imgg">
                         <input type="hidden" name="id" value="<?php echo $product->id; ?>">
                         <img src="product-images/thumb/<?php echo $product->source; ?>"
-                             class="img-thumbnail" name="imagename" id="imgg">
+                             class="img-thumbnail" name="imagename" >
 
                     </div>
                     <?php

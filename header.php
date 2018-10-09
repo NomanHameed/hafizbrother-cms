@@ -19,12 +19,12 @@ URI     : https://colorlib.com
     <meta name="description" content="Mobland - Mobile App Landing Page Template">
     <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
     <link href="css/lightbox.css" rel="stylesheet">
-    
+
     <!-- Font -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js">  
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
     baguetteBox.run('.tz-gallery');
@@ -33,8 +33,8 @@ URI     : https://colorlib.com
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-       $("#imgg").click(function () {
-           
+       $("#imgg a").click(function () {
+           alert("ok");
        });
     });
 </script>
@@ -51,4 +51,3 @@ URI     : https://colorlib.com
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
-        
