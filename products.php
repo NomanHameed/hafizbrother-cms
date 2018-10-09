@@ -38,10 +38,11 @@
                  <div class="col-lg-12 text-center call-to-action">
                     <h3 style="color: white;">  Our Products</h3>
                 </div>
-
+            <div class="col-md-12" id="singleimg">
                 <div class="row">
                     <div class="col-md-5">
-                        <img src="product-images/13-12.jpg" width="400px" alt="sorry">
+                        <img src="product-images/13-12.jpg" width="400px" alt="sorry" id="im">
+                        <p id="de"></p>
                     </div><div class="col-md-1"></div>
                     <div class="col-md-6 col-offset-md-1">
                         <h1>heading</h1>
@@ -50,8 +51,8 @@
                         <p>askdjfbaksjdfkajsbfasjkldf</p>
                     </div>
                 </div>
-            <br>
-            <div class="col-md-12">
+            </div>
+                <br>
                 <div class="col-md-12">
                     <div class="row">
                         <nav aria-label="Page navigation example">
@@ -62,19 +63,31 @@
                         </nav>
                     </div>
                 </div>
+
+<!--             <div class="row">-->
+<!--            --><?php //foreach ($products as $product){
+//                ?>
+<!--                <div class="col-md-3" style="margin-top: 15px">-->
+<!--             <a href="product-images/--><?php //echo $product->source; ?><!--"-->
+<!--                       data-lightbox="roadtrip" data-title="--><?php //echo "<b>".$product->product_name . "<b>" ; ?><!--" >-->
+<!--                        <img src="product-images/thumb/--><?php //echo $product->source; ?><!--" class="img-thumbnail">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            --><?php
+//            } ?>
+<!--             </div>-->
+            <div class="row">
+                <?php foreach ($products as $product){
+                    ?>
+                    <div class="col-md-3" style="margin-top: 15px">
+                        <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                        <img src="product-images/thumb/<?php echo $product->source; ?>"
+                             class="img-thumbnail" name="imagename" id="imgg">
+
+                    </div>
+                    <?php
+                } ?>
             </div>
-             <div class="row">
-            <?php foreach ($products as $product){
-                ?>
-                <div class="col-md-3" style="margin-top: 15px">
-             <a href="product-images/<?php echo $product->source; ?>"
-                       data-lightbox="roadtrip" data-title="<?php echo "<b>".$product->product_name . "<b>" ; ?>" >
-                        <img src="product-images/thumb/<?php echo $product->source; ?>" class="img-thumbnail">
-                    </a>
-                </div>
-            <?php
-            } ?>
-             </div>
         </div>
   </div>
     <footer class="my-5 text-center">
