@@ -38,7 +38,31 @@
                  <div class="col-lg-12 text-center call-to-action">
                     <h3 style="color: white;">  Our Products</h3>
                 </div>
-            
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="product-images/13-12.jpg" width="400px" alt="sorry">
+                    </div><div class="col-md-1"></div>
+                    <div class="col-md-6 col-offset-md-1">
+                        <h1>heading</h1>
+                        <p>askdjfbaksjdfkajsbfasjkldf</p>
+                        <p>askdjfbaksjdfkajsbfasjkldf</p>
+                        <p>askdjfbaksjdfkajsbfasjkldf</p>
+                    </div>
+                </div>
+            <br>
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <div class="row">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
              <div class="row">
             <?php foreach ($products as $product){
                 ?>
