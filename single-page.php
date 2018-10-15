@@ -36,8 +36,8 @@ $products = \Models\Product::all();
     <br><br>
     <div class="container">
 <div class="col-md-12">
-    <a href="#" class="previous btn btn-primary">&laquo; Previous</a>
-    <a href="#" class="next btn btn-primary" >Next &raquo;</a>
+    <a href="#" class="previous btn btn-primary" id="pre">&laquo; Previous</a>
+    <a href="#" class="next btn btn-primary" id="nxt">Next &raquo;</a>
 </div>
         <br>
             <div class="col-md-12 col-sm-12">

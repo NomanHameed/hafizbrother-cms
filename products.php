@@ -51,9 +51,7 @@
                         <p>askdjfbaksjdfkajsbfasjkldf</p>
                     </div>
                 </div>
-            </div>
-                <br>
-                <div class="col-md-12">
+                 <br>
                     <div class="row">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
@@ -76,18 +74,24 @@
 <!--            --><?php
 //            } ?>
 <!--             </div>-->
+            <div class="col-md-12">
+
             <div class="row">
                 <?php foreach ($products as $product){
                     ?>
-                    <div class="col-md-3" style="margin-top: 15px" id="imgg">
-                        <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                    <div class="col-md-3" style="margin-top: 15px"  >
+
+                        <input type="hidden" name="id" class="pid" value="<?php echo $product->id; ?>">
+
                         <img src="product-images/thumb/<?php echo $product->source; ?>"
-                             class="img-thumbnail" name="imagename" >
+                             class="img-thumbnail imgg" name="imagename" >
 
                     </div>
                     <?php
                 } ?>
             </div>
+            </div>
+
         </div>
   </div>
     <footer class="my-5 text-center">

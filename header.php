@@ -33,8 +33,9 @@ URI     : https://colorlib.com
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-       $("#imgg a").click(function () {
-           alert("ok");
+       $(".imgg").click(function () {
+          var pid= $(".pid").val();
+           alert(pid);
        });
     });
 </script>
