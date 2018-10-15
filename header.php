@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <?php include_once 'connection.php';
@@ -39,7 +40,6 @@ URI     : https://colorlib.com
        });
     });
 </script>
-
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">

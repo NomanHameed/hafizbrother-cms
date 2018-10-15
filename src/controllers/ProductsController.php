@@ -155,7 +155,10 @@ class ProductsController{
     {
         // show view for adding product
     }
-
+    public function showMessage($id){
+        $wel= "hi ". $id;
+        return json_encode($wel);
+    }
 }
 
 ?>
