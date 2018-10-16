@@ -2,6 +2,43 @@
 $products = \Models\Product::all();
 
 ?>
+<script>
+    // var ajaxRequest;  // The variable that makes Ajax possible!
+    // function createRequest() {
+    //
+    //
+    //     try {
+    //         // Opera 8.0+, Firefox, Safari
+    //         ajaxRequest = new XMLHttpRequest();
+    //     } catch (e) {
+    //         // Internet Explorer Browsers
+    //         try {
+    //             ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+    //         } catch (e) {
+    //             try {
+    //                 ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+    //             } catch (e) {
+    //                 // Something went wrong
+    //                 alert("Your browser broke!");
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     var url= 13;
+    //     ajaxRequest.open("GET","show.php?id="+url,true);
+    //     ajaxRequest.send();
+    // }
+
+    $(document).ready(function () {
+       $('#msg').click(function () {
+           $.get("show.php?id=14",function (data,status) {
+               // alert("Data: "+ data + "Status: "+ status);
+                var dataget=document.getElementById("showhere");
+                dataget.insertAdjacentHTML("beforeend",data);
+           })
+       })
+    });
+</script>
     <!-- Nav Menu -->
     <div class="nav-menu fixed-top">
         <div class="container">
@@ -34,29 +71,18 @@ $products = \Models\Product::all();
 <!--         <br>-->
     </header>
     <br><br>
-    <div class="container">
-<div class="col-md-12">
-    <form>
-        <input type="hidden" name="idi" id="idi" value="12">
-        <input type ='button' onclick="ajaxFunction()" id="msg" value = 'Query MySQL'/>
-    </form>
-    <a href="#" class="previous btn btn-primary" id="pre">&laquo; Previous</a>
-    <a href="#" class="next btn btn-primary" id="nxt">Next &raquo;</a>
-</div>
-        <br>
-            <div class="col-md-12 col-sm-12">
-                <div class="row">
-                    <div class="col-md-7 col-sm-8 align-content-center">
-                        <img width="500" height="450" src="images/man.jpg" alt="Sorry">
-                    </div>
-                    <div class="col-md-5 col-sm-4 align-content-center">
-                <h2 id="heading123"></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                            congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div class="container" id="showhere">
+        <div class="col-md-12">
+            <form>
+                <input type="hidden" name="idi" id="idi" value="12">
+                <input type ='button' onclick="createRequest()" id="msg" value = 'Query MySQL'/>
+            </form>
+            <a href="#" class="previous btn btn-primary" id="pre">&laquo; Previous</a>
+            <a href="#" class="next btn btn-primary" id="nxt">Next &raquo;</a>
+        </div>
+    <?php
+//    include_once ("show.php");
+    ?>
 
     </div>
 
