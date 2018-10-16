@@ -3,7 +3,6 @@ $products = \Models\Product::all();
 
 ?>
     <!-- Nav Menu -->
-
     <div class="nav-menu fixed-top">
         <div class="container">
             <div class="row">
@@ -37,6 +36,10 @@ $products = \Models\Product::all();
     <br><br>
     <div class="container">
 <div class="col-md-12">
+    <form>
+        <input type="hidden" name="idi" id="idi" value="12">
+        <input type ='button' onclick="ajaxFunction()" id="msg" value = 'Query MySQL'/>
+    </form>
     <a href="#" class="previous btn btn-primary" id="pre">&laquo; Previous</a>
     <a href="#" class="next btn btn-primary" id="nxt">Next &raquo;</a>
 </div>
@@ -47,7 +50,7 @@ $products = \Models\Product::all();
                         <img width="500" height="450" src="images/man.jpg" alt="Sorry">
                     </div>
                     <div class="col-md-5 col-sm-4 align-content-center">
-                <h2>Heading</h2>
+                <h2 id="heading123"></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
                             congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
                         </p>
