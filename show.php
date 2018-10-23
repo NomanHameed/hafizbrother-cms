@@ -5,7 +5,7 @@ include_once ("connection.php");
 // include_once("header.php");
 $id= $_GET['id'];
 //$id=13;
-$products= Models\Product::find($id);
+$products= Product::find($id);
 
     $result= json_encode($products);
 
