@@ -113,8 +113,9 @@ class ProductsController{
         $product = Product::find($id);
         $product->product_name = $data['product_name'];
         $product->product_code = $data['product_code'];
+        $product->category_id = $data['category_id'];
 
-        if(isset($files['product_image'])){
+        if(isset($files['product_image']) && !empty($files['product_image']['name'])){
             unlink("../product-images/".$product->source);
             unlink("../product-images/thumb/".$product->source);
             $product->source = $this->uploadFile($files, $id);
@@ -129,36 +130,15 @@ class ProductsController{
     {
 
         $product = Product::where('id' , $id)->delete();
-        if ($product){
-                unlink("../product-images/".$file);
-                unlink("../product-images/thumb/".$file);
-                $msg="Item Delete Successfully";
-                return $msg;
+        $msg = ($product) ? "Item Delete Successfully" : "Sorry";
+
+        if(file_exists("../product-images/".$file)){
+            unlink("../product-images/".$file);
+            unlink("../product-images/thumb/".$file);
         }
-        $msg="Sorry";
-            return $msg;
+        return $msg;
     }
 
-    public function show($id)
-    {
-        // find product by id
-        // include view file
-    }
-
-    public function edit($id)
-    {
-        // find product by id
-        // include view file
-    }
-
-    public function create()
-    {
-        // show view for adding product
-    }
-    public function showMessage($id){
-        $wel= "hi ". $id;
-        return json_encode($wel);
-    }
 }
 
 ?>

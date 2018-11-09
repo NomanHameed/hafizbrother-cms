@@ -8,6 +8,6 @@
 define('APP_DIRECTORY', 'hafizbroter-cms');
 define('HOST', 'localhost');
 define('USER', 'root');
-define('PASSWORD', '');
-define('DATABASE_NAME', 'hafiz');
-define('DEBUG', false);
+define('PASSWORD', 'coeus123');
+define('DATABASE_NAME', 'hafiz2');
+define('DEBUG', true);

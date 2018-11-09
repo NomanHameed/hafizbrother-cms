@@ -22,7 +22,6 @@ include_once "incl/navbar.php";
 
 <div class="container">
 	<div class="col-md-12">
-
         <?php
         $response = [];
         $productsController = new ProductsController();
@@ -61,8 +60,8 @@ include_once "incl/navbar.php";
             echo $response;
         }
 
+        $categories = \Models\Category::where('is_active', 1)->get();
         ?>
-
 <form method="post" action="add-product.php" class="" enctype="multipart/form-data">
 <div class="row">
     <div class="col-md-3 text-center">Name</div>
@@ -93,6 +92,15 @@ include_once "incl/navbar.php";
 		<div class="col-md-4">
 		        <input class="form-control" value="<?php echo $product->source ?>" type="file" name="product_image">
 		</div>
+        <div class="col-md-3">
+            <select class="form-control" name="category_id">
+                <?php foreach ($categories as $category) {
+                    ?>
+                    <option value="<?php echo $category->id; ?>" <?php if($product->category_id == $category->id) echo 'selected';  ?>><?php echo $category->category_name; ?></option>
+                <?php
+                }?>
+            </select>
+        </div>
 		<div class="col-md-2">
 		<button type="submit" name="<?php echo (isset($_POST['edit']))? 'update' : 'save'; ?>" class="btn btn-primary"> SAVE  </button>
 		</div>

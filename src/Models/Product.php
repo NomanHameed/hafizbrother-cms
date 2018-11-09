@@ -2,8 +2,15 @@
 
 namespace Models;
 
-class Product extends \Illuminate\Database\Eloquent\Model {
+use Illuminate\Database\Eloquent\Model;
 
-    protected $fillable = ['product_name', 'product_code', 'source'];
+class Product extends Model {
+
+    protected $fillable = ['product_name', 'product_code', 'source', 'category_id'];
     public $timestamps = false;
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

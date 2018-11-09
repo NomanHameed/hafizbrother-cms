@@ -9,6 +9,9 @@
                 <a href="add-product.php" class="nav-link">Add Products</a>
             </li>
             <li class="nav-item">
+                <a href="add-category.php" class="nav-link">Add Category</a>
+            </li>
+            <li class="nav-item">
                 <a href="change-password.php" class="nav-link">Change Password</a>
             </li>
             <li class="nav-item">
