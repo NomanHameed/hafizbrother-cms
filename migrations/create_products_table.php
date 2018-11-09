@@ -34,5 +34,5 @@ Capsule::schema()->create('products', function ($table) {
     $table->string('product_code',500);
     $table->string('source');
     $table->timestamps();
-    
+
 });
