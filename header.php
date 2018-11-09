@@ -24,8 +24,13 @@ URI     : https://colorlib.com
     <!-- Font -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
     <script>baguetteBox.run('.tz-gallery');</script>
+    <script type="text/javascript">
+        var API_URL = '<?php echo API_URL ?>';
+    </script>
 
 <script>
     // $(document).ready(function () {

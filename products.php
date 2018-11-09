@@ -110,6 +110,7 @@
     $(document).ready(function () {
         $('.product-image').click(function (e) {
             var image = $(this);
+            console.log('herer');
             // $("#single-image").attr('src', image.attr('src'));
             // $("#single-content").text(image.data('product-code'));
 
@@ -129,6 +130,10 @@
             $("#single_page_div").hide();
             $("#buttons").hide();
         });
+
+        $.post( API_URL, {item : 'products'}, function (response) {
+            console.log(response);
+        })
     });
 </script>
 <?php include_once("footer.php"); ?>
